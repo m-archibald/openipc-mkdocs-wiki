@@ -1,0 +1,354 @@
+site_name: OpenIPC Wiki
+site_description: Open-source firmware for IP cameras
+site_author: OpenIPC Team
+site_url: https://github.com/OpenIPC/wiki
+
+# Repository
+repo_name: OpenIPC/wiki
+repo_url: https://github.com/OpenIPC/wiki
+edit_uri: edit/main/docs/
+
+# Theme
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: green
+      accent: light-green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: green
+      accent: light-green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+  logo: images/logo_openipc.png
+  favicon: images/logo_openipc.png
+
+# Plugins
+plugins:
+  - search:
+      lang: en, ru
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+      timezone: UTC
+  - awesome-pages
+
+# Markdown extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+      title: Table of Contents
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: OpenIPC
+      repo: wiki
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Home: index.md
+  - English:
+    - Introduction:
+      - About OpenIPC: en/introduction/index.md
+      - Supported Devices: en/introduction/supported-devices.md
+      - Supported Sensors: en/introduction/supported-sensors.md
+      - Changelog: en/introduction/changelog.md
+    - Installation:
+      - Overview: en/installation/index.md
+      - General Installation Guide: en/installation/guide.md
+      - Goke Installation: en/installation/goke.md
+      - HiSilicon Installation: en/installation/hisilicon.md
+      - Ingenic Installation: en/installation/ingenic.md
+      - Novatek Installation: en/installation/novatek.md
+      - SigmaStar Installation: en/installation/sigmastar.md
+      - XM510/XM530 Installation: en/installation/xm530.md
+      - Old Installation Guides: en/installation/old.md
+      - Old Manual: en/installation/old-manual.md
+    - Usage:
+      - Overview: en/usage/index.md
+      - Network Settings: en/usage/network-settings.md
+      - WiFi Driver: en/usage/adding-wifi-driver.md
+      - Wireless Settings: en/usage/wireless-settings.md
+      - System Features: en/usage/system-features.md
+      - Majestic Streamer: en/usage/majestic-streamer.md
+      - Majestic Configuration: en/usage/majestic-config.md
+      - Majestic Research: en/usage/majestic-research.md
+      - Web Interface: en/usage/web-interface.md
+      - Firmware Upgrade: en/usage/sysupgrade.md
+      - Image Quality Tuning: en/usage/image-quality-tuning.md
+      - Memory Tuning: en/usage/memory-tuning.md
+      - IPC Tool Usage: en/usage/ipctool.md
+      - GPIO Settings: en/usage/gpio-settings.md
+      - ACMEv2: en/usage/acme-v2.md
+      - YouTube Streaming: en/usage/youtube-streaming.md
+      - WiFi XM530: en/usage/wifi-xm530.md
+      - HomeKit Integration: en/usage/homekit-integration.md
+      - Auto Night Mode: en/usage/auto-night-mode.md
+      - ZeroTier Setup: en/usage/zerotier.md
+      - Motor Control: en/usage/motors.md
+    - FPV:
+      - FPV Overview: en/fpv/index.md
+      - FPV FAQ: en/fpv/faq.md
+      - General Info: en/fpv/general.md
+      - OpenIPC AIO "Mario": en/fpv/aio-mario.md
+      - OpenIPC AIO "UltraSight": en/fpv/aio-ultrasight.md
+      - OpenIPC AIO "Thinker": en/fpv/aio-thinker.md
+      - Step-by-Step Guide: en/fpv/step-by-step.md
+      - From Buy to Fly: en/fpv/buy-to-fly.md
+      - OpenIPC as FPV System: en/fpv/system.md
+      - SigmaStar FPV Devices: en/fpv/sigmastar.md
+      - OpenIPC Alliance: en/fpv/alliance.md
+      - Ubuntu Groundstation: en/fpv/gs-ubuntu.md
+      - Orange Pi 5 Groundstation: en/fpv/gs-orange-pi5.md
+      - Orange Pi 5 VRX: en/fpv/orange-pi-5-vrx.md
+      - FPV Videos: en/fpv/videos.md
+      - RunCam WiFiLink: en/fpv/runcam-wifilink.md
+      - Radxa Groundstation: en/fpv/radxa.md
+      - MAVFWD Tool: en/fpv/mavfwd.md
+    - Troubleshooting:
+      - Network Issues Hi35xx: en/troubleshooting/network-hi35xx.md
+      - Majestic Issues: en/troubleshooting/majestic.md
+      - SigmaStar Unbrick: en/troubleshooting/sigmastar-unbrick.md
+      - Ingenic T31 Unbrick: en/troubleshooting/ingenic-t31-unbrick.md
+    - Equipment:
+      - Flashing Equipment: en/equipment/flashing.md
+      - CH341A Voltage Fix: en/equipment/ch341a-voltage-fix.md
+      - Flash Chip Interfacing: en/equipment/flash-chip-interfacing.md
+    - Development:
+      - Overview: en/development/index.md
+      - NFS Boot: en/development/nfs-boot.md
+      - FFmpeg Usage: en/development/ffmpeg.md
+      - Kernel Configuration: en/development/kernel.md
+      - Supported Sensors List: en/development/sensors.md
+      - Visual Sensor Identification: en/development/visual-sensor-id.md
+      - Buildroot Packages: en/development/buildroot-packages.md
+      - Firmware Development: en/development/firmware.md
+      - Adding USB Driver: en/development/adding-usb-driver.md
+    - Help & Tips:
+      - FAQ: en/help/faq.md
+      - U-Boot Tips: en/help/uboot.md
+      - Web UI Help: en/help/webui.md
+      - Telegram Streaming: en/help/telegram-streaming.md
+      - Development Tricks: en/help/tricks.md
+      - Glossary: en/help/glossary.md
+    - Hardware:
+      - SoC Manufacturers: en/hardware/soc-manufacturers.md
+      - Sensor Manufacturers: en/hardware/sensor-manufacturers.md
+      - Board Manufacturers: en/hardware/board-manufacturers.md
+    - Cameras:
+      - AHD2NET Converter: en/cameras/ahd2net-converter.md
+      - Chacon IPCAM-RI01: en/cameras/chacon-ipcam-ri01.md
+      - Smartwares CIP-37210: en/cameras/smartwares-cip-37210.md
+      - Foscam X5: en/cameras/foscam-x5.md
+      - TP-Link Tapo C110: en/cameras/tapo-c110.md
+      - ATOM Cam / Wyze: en/cameras/wyze-integration.md
+      - Digitus DN-16048: en/cameras/digitus-dn16048.md
+      - XiongMai IPG-53H20AF: en/cameras/ipg-53h20af.md
+      - LSC Smart Doorbell: en/cameras/lsc-doorbell.md
+    - Software:
+      - Video Recording Software: en/software/video-recording.md
+    - Packages:
+      - Vtun: en/packages/vtun.md
+      - WireGuard: en/packages/wireguard.md
+    - Reference:
+      - Company Names: en/reference/company-names.md
+      - To-Do List: en/reference/todo.md
+      - Contributing: en/reference/contribute.md
+      - Notes: en/reference/notes.md
+  - Русский:
+    - Главная: ru/index.md
+    - Введение:
+      - О проекте: ru/introduction/index.md
+    - Установка:
+      - Обзор: ru/installation/index.md
+    - Использование:
+      - Обзор: ru/usage/index.md
+    - FPV:
+      - Обзор: ru/fpv/index.md
+    - Помощь:
+      - FAQ: ru/help/faq.md
+      - Веб-интерфейс: ru/help/webui.md
+      - Telegram: ru/help/telegram.md
+    - Камеры:
+      - Switcam HS-303: ru/cameras/hs303.md
+    - Справка:
+      - Участие в проекте: ru/reference/contribute.md
+  - Usage:
+    - Network Settings: en/usage/network-settings.md
+    - WiFi Driver: en/usage/adding-wifi-driver.md
+    - Wireless Settings: en/usage/wireless-settings.md
+    - System Features: en/usage/system-features.md
+    - Majestic Streamer: en/usage/majestic-streamer.md
+    - Majestic Configuration: en/usage/majestic-config.md
+    - Majestic Research: en/usage/majestic-research.md
+    - Web Interface: en/usage/web-interface.md
+    - Firmware Upgrade: en/usage/sysupgrade.md
+    - Image Quality Tuning: en/usage/image-quality-tuning.md
+    - Memory Tuning: en/usage/memory-tuning.md
+    - IPC Tool Usage: en/usage/ipctool.md
+    - GPIO Settings: en/usage/gpio-settings.md
+    - ACMEv2: en/usage/acme-v2.md
+    - YouTube Streaming: en/usage/youtube-streaming.md
+    - WiFi XM530: en/usage/wifi-xm530.md
+    - HomeKit Integration: en/usage/homekit-integration.md
+    - Auto Night Mode: en/usage/auto-night-mode.md
+    - ZeroTier Setup: en/usage/zerotier.md
+    - Motor Control: en/usage/motors.md
+  - FPV:
+    - FPV Overview: en/fpv/index.md
+    - FPV FAQ: en/fpv/faq.md
+    - General Info: en/fpv/general.md
+    - OpenIPC AIO "Mario": en/fpv/aio-mario.md
+    - OpenIPC AIO "UltraSight": en/fpv/aio-ultrasight.md
+    - OpenIPC AIO "Thinker": en/fpv/aio-thinker.md
+    - Step-by-Step Guide: en/fpv/step-by-step.md
+    - From Buy to Fly: en/fpv/buy-to-fly.md
+    - OpenIPC as FPV System: en/fpv/system.md
+    - SigmaStar FPV Devices: en/fpv/sigmastar.md
+    - OpenIPC Alliance: en/fpv/alliance.md
+    - Ubuntu Groundstation: en/fpv/gs-ubuntu.md
+    - Orange Pi 5 Groundstation: en/fpv/gs-orange-pi5.md
+    - Orange Pi 5 VRX: en/fpv/orange-pi-5-vrx.md
+    - FPV Videos: en/fpv/videos.md
+    - RunCam WiFiLink: en/fpv/runcam-wifilink.md
+    - Radxa Groundstation: en/fpv/radxa.md
+    - MAVFWD Tool: en/fpv/mavfwd.md
+  - Troubleshooting:
+    - Network Issues Hi35xx: en/troubleshooting/network-hi35xx.md
+    - Majestic Issues: en/troubleshooting/majestic.md
+    - SigmaStar Unbrick: en/troubleshooting/sigmastar-unbrick.md
+    - Ingenic T31 Unbrick: en/troubleshooting/ingenic-t31-unbrick.md
+  - Equipment:
+    - Flashing Equipment: en/equipment/flashing.md
+    - CH341A Voltage Fix: en/equipment/ch341a-voltage-fix.md
+    - Flash Chip Interfacing: en/equipment/flash-chip-interfacing.md
+  - Development:
+    - NFS Boot: en/development/nfs-boot.md
+    - FFmpeg Usage: en/development/ffmpeg.md
+    - Kernel Configuration: en/development/kernel.md
+    - Supported Sensors List: en/development/sensors.md
+    - Visual Sensor Identification: en/development/visual-sensor-id.md
+    - Buildroot Packages: en/development/buildroot-packages.md
+    - Firmware Development: en/development/firmware.md
+    - Adding USB Driver: en/development/adding-usb-driver.md
+  - Help & Tips:
+    - FAQ: en/help/faq.md
+    - U-Boot Tips: en/help/uboot.md
+    - Web UI Help: en/help/webui.md
+    - Telegram Streaming: en/help/telegram-streaming.md
+    - Development Tricks: en/help/tricks.md
+    - Glossary: en/help/glossary.md
+  - Hardware:
+    - SoC Manufacturers: en/hardware/soc-manufacturers.md
+    - Sensor Manufacturers: en/hardware/sensor-manufacturers.md
+    - Board Manufacturers: en/hardware/board-manufacturers.md
+  - Cameras:
+    - AHD2NET Converter: en/cameras/ahd2net-converter.md
+    - Chacon IPCAM-RI01: en/cameras/chacon-ipcam-ri01.md
+    - Smartwares CIP-37210: en/cameras/smartwares-cip-37210.md
+    - Foscam X5: en/cameras/foscam-x5.md
+    - TP-Link Tapo C110: en/cameras/tapo-c110.md
+    - ATOM Cam / Wyze: en/cameras/wyze-integration.md
+    - Digitus DN-16048: en/cameras/digitus-dn16048.md
+    - XiongMai IPG-53H20AF: en/cameras/ipg-53h20af.md
+    - LSC Smart Doorbell: en/cameras/lsc-doorbell.md
+  - Software:
+    - Video Recording Software: en/software/video-recording.md
+  - Packages:
+    - Vtun: en/packages/vtun.md
+    - WireGuard: en/packages/wireguard.md
+  - Reference:
+    - Company Names: en/reference/company-names.md
+    - To-Do List: en/reference/todo.md
+    - Contributing: en/reference/contribute.md
+    - Notes: en/reference/notes.md
+  - Resources:
+    - OpenIPC Website: https://openipc.org/
+    - GitHub Releases: https://github.com/OpenIPC/firmware/releases
+    - Telegram: https://openipc.org/our-channels
+    - OpenCollective: https://opencollective.com/openipc
+    - Twitter: https://twitter.com/OpenIPC
+    - YouTube: https://www.youtube.com/channel/UCaXlbR2uGTRFh8jQ2lCFd2g
+
+# Extra configuration
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/OpenIPC
+    - icon: fontawesome/brands/telegram
+      link: https://openipc.org/our-channels
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/OpenIPC
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCaXlbR2uGTRFh8jQ2lCFd2g
+  version:
+    provider: mike
+
+# Custom CSS
+extra_css:
+  - stylesheets/extra.css
+
+# Copyright
+copyright: |
+  &copy; 2024 OpenIPC Team - 
+  <a href="#__consent">Change Cookie Settings</a>
