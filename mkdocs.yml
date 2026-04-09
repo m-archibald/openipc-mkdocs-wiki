@@ -1,11 +1,11 @@
 site_name: OpenIPC Wiki
 site_description: Open-source firmware for IP cameras
 site_author: OpenIPC Team
-site_url: https://github.com/OpenIPC/wiki
+site_url: https://m-archibald.github.io/openipc-mkdocs-wiki/
 
 # Repository
-repo_name: OpenIPC/wiki
-repo_url: https://github.com/OpenIPC/wiki
+repo_name: m-archibald/openipc-mkdocs-wiki
+repo_url: https://github.com/m-archibald/openipc-mkdocs-wiki
 edit_uri: edit/main/docs/
 
 # Theme
